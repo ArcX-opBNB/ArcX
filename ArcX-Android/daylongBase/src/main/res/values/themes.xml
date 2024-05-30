@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme.Base" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="colorAccent">@color/color_main</item>
+        <item name="windowNoTitle">true</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textAppearanceButton">@style/myTextAppearanceButton</item>
+        <item name="android:windowAnimationStyle">@style/enter_out_style</item>
+    </style>
+
+
+    <!--activity出现消失样式-->
+    <style name="enter_out_style" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_from_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_from_right</item>
+    </style>
+
+    <style name="myTextAppearanceButton" parent="TextAppearance.AppCompat.Widget.Button">
+        <item name="textAllCaps">false</item>
+    </style>
+
+
+    <style name="dialogStyle" parent="AppTheme.Base">
+        <!--android:windowBackground 设置背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--android:windowNoTitle 设置没有标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--android:windowIsFloating  设置浮在最上面 -->
+        <item name="android:windowIsFloating">true</item>
+        <!--android:windowIsTranslucent 设置窗口是半透明的-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--android:windowContentOverlay 设置窗口内容叠加 是否有覆盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--android:windowAnimationStyle 设置弹出动画-->
+        <!--android:backgroundDimEnabled 设置背景是否模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="MaterialSearch" parent="Theme.AppCompat.Dialog">
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" >shortEdges</item>
+
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+
+</resources>

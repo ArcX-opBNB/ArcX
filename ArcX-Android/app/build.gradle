@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+
+def PropertyAdd(String filename, String propName) {
+    //这里必须用file  如果用rootProject的话 则找不到file为null
+    def propsFile = file(filename)
+    //只有在打正式版的情况下才继续运行，否则退出方法，这样是为了防止 编译时候versionCode 也自增 if里面的参数可以在Build窗口里面 message 最上边[]里面就是
+    def runTasks = gradle.startParameter.taskNames
+    if (!(':app:assembleRelease' in runTasks)) {
+        return
+    }
+    if (propsFile.exists()) {
+        def props = new Properties()
+        props.load(new FileInputStream(propsFile))
+        //这里要注意 props[propName] 是String 类型
+        if (props[propName] != null) {
+            def code = (props[propName]).toInteger() //转成Integer
+            props[propName] = (++code).toString()  //自增 且转成String
+        } else {
+            print("No such property " + propName + " in file " + filename);
+        }
+        //在这里提交 对version.properties的更改
+        props.store(propsFile.newWriter(), null)
+    } else {
+        print(filename + " does not exist!")
+    }
+}
+//用于生成时间wo
+def buildTime() {
+    return new Date().format("yyyyMMddHHmmss")
+}
+
+android {
+    compileSdk 34
+    namespace "com.daylong.arcx"
+
+    defaultConfig {
+        applicationId "com.daylong.arcx"
+        minSdk 24
+        targetSdk 34
+        versionCode 3
+        versionName "1.0.1"
+
+        signingConfigs {
+
+
+        }
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86_64', 'x86'
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                output ->
+                    //拿到输出文件
+                    def outputFile = output.outputFile
+                    //这里也可以调用上面的 (':app:assembleRelease' in runTasks) 进行判断 感觉会更好一些
+                    if (outputFile.name.contains("release")) {
+                        //在字符串里面调用方法的话，得要${ }里面调用 切记
+//                        outputFileName = new File("../release/", "Coin_Woned_${defaultConfig.versionName}_${defaultConfig.versionCode}_${buildTime()}.apk");
+                        outputFileName = new File("../release/", "arcx${buildTime()}.apk");
+                        //调用方法 增加versionCode 值
+                        PropertyAdd("version.properties", "versionCode")
+                    }
+                    if (outputFile.name.contains("debug")) {
+                        outputFileName = new File("../debug/", "metarcade_debug.apk")
+                    }
+            }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation project(':baseUserLibrary')
+    implementation project(':gameSocketlibrary')
+    implementation project(':httplibrary')
+    implementation project(':daylongBase')
+    implementation project(':gameLibrary')
+    implementation project(':reglibrary')
+    implementation project(':musicLibrary')
+    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'
+
+
+    // 引入你需要的标准库版本
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10"
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:AddressPicker:4.1.13'
+
+    // 排除其他不需要的标准库版本
+    configurations.all {
+        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk7'
+    }
+    implementation 'com.github.bingoogolapple.BGAQRCode-Android:zxing:1.3.8'
+
+}

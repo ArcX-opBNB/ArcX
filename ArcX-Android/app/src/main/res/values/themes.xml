@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme.My" parent="Theme.MaterialComponents.Light.NoActionBar" >
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#000000</item>
+        <item name="android:windowBackground">#000000</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textAppearanceButton">@style/myTextAppearanceButton</item>
+        <item name="android:windowAnimationStyle">@style/enter_out_style</item>
+        <item name="android:textColorPrimary">@color/color_333</item>
+
+    </style>
+</resources>

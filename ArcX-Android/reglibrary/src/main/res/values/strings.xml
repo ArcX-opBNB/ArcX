@@ -1,0 +1,9 @@
+<resources>
+    <!--    百度包使用这个-->
+
+    <string name="str_doll_machine_status_suc">Great! </string>
+    <string name="str_doll_machine_status_fail">Just a little bit… </string>
+    <string name="str_doll_machine_tap_to">Tap to continue </string>
+    <string name="str_doll_btn_no">NO</string>
+    <string name="str_doll_btn_once">ONCE AGAIN</string>
+</resources>

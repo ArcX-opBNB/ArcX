@@ -1,0 +1,11 @@
+rootProject.name = "arcx"
+include ':app'
+include ':daylongBase'
+include ':gameSocketlibrary'
+include ':baseUserLibrary'
+include ':httplibrary'
+include ':BaseCache'
+include ':gameLibrary'
+include ':reglibrary'
+include ':storeLibrary'
+include ':musicLibrary'

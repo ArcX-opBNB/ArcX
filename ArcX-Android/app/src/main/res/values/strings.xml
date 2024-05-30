@@ -1,0 +1,16 @@
+<resources>
+        <string name="app_name" translatable="false">arcx</string>
+        <string name="task" translatable="false">每日任務</string>
+        <string name="invitation" translatable="false">邀请好友</string>
+        <string name="invitation_bind" translatable="false">填写邀请码</string>
+        <string name="recharge" translatable="false">充值</string>
+        <string name="address_title" translatable="false">收货地址</string>
+        <string name="new_address" translatable="false">收货地址</string>
+        <string name="editext_address" translatable="false">收货地址</string>
+        <string name="order_confirm" translatable="false">订单确认</string>
+        <string name="str_success" translatable="false">success</string>
+        <string name="feedback" translatable="false">反馈</string>
+        <string name="setting" translatable="false">设置</string>
+        <string name="user_info_nickname" translatable="false">Name</string>
+        <string name="user_info_gender" translatable="false">Gender</string>
+</resources>

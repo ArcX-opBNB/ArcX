@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--activity style基类-->
+    <style name="splash" parent="AppTheme.My">
+        <item name="android:windowBackground">@drawable/shape_splash</item>
+
+    </style>
+    <style name="MyAppTheme" parent="AppTheme.Base">
+
+
+    </style>
+</resources>

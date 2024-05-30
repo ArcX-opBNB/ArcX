@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="base_root_id" type="id"/>
+    <item name="base_root_title" type="id"/>
+    <item name="base_content_id" type="id"/>
+    <item name="base_view_ll" type="id" />
+    <item name="base_text_view" type="id" />
+    <item name="base_img_view" type="id" />
+    <item name="base_btn_view" type="id" />
+    <item name="base_ibtn_view" type="id" />
+    <item name="base_view_1" type="id" />
+    <item name="base_view_2" type="id" />
+    <item name="base_view_3" type="id" />
+    <item name="base_view_4" type="id" />
+    <item name="base_view_5" type="id" />
+    <item name="base_view_6" type="id" />
+    <item name="base_view_7" type="id" />
+    <item name="base_view_8" type="id" />
+    <item name="base_view_9" type="id" />
+    <item name="base_view_bg" type="id" />
+    <item name="base_view_iv" type="id" />
+    <item name="base_frt" type="id" />
+    <item name="base_frt2" type="id" />
+    <item name="base_frt3" type="id" />
+    <item name="base_check" type="id" />
+    <item name="base_pb" type="id" />
+    <item name="base_rg" type="id" />
+    <item name="base_rb1" type="id" />
+    <item name="base_rb2" type="id" />
+    <item name="base_rv" type="id" />
+    <item name="base_back_btn" type="id" />
+    <item name="base_btn_cancel" type="id" />
+    <item name="base_btn_unified" type="id" />
+    <item name="base_progress_bar" type="id" />
+    <item name="base_coin_num_layout" type="id" />
+    <item name="view_base_r_r_c" type="id" />
+
+</resources>

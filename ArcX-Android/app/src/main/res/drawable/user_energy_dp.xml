@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/img_dp_energy_title_none" />
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:drawable="@drawable/img_dp_energy_title_none" />
+    <item android:id="@android:id/progress">
+        <clip>
+            <bitmap android:src="@drawable/img_dp_energy_title_pass" />
+        </clip>
+    </item>
+
+</layer-list>

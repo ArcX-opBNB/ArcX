@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "type": 1,
+    "musicName": "scrolling",
+    "outTime": 2000,
+    "desc": "xxx"
+  },
+  {
+    "id": 9,
+    "type": 1,
+    "musicName": "free_game",
+    "desc": "免费游戏"
+  },
+  {
+    "id": 3,
+    "type": 2,
+    "musicName": "sound_kingkong_free_game_stop",
+    "desc": "金刚图标显示"
+  },
+  {
+    "id": 13,
+    "type": 2,
+    "musicName": "free_game",
+    "desc": "免费游戏"
+  }
+]

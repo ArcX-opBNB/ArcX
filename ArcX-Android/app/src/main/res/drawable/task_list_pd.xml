@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/shape_bp_bg_pass" />
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:drawable="@drawable/shape_bp_bg_pass" />
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <size
+                    android:width="126dp"
+                    android:height="8dp" />
+                <solid android:color="#ff57db26" />
+                <corners android:radius="30dp" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>
