@@ -8,19 +8,19 @@ ArcX is the world's first metaverse ecosystem project to integrate physical arca
 
 ## opBNB Testnet Deployment
 
-**Contract Address:**
+### Contract Address:
 
 0xD5cC51EEd4bE7DA51d9D11eCE6d007883B3C93EA
 
 [View Deployment on opBNB Testnet](https://opbnb-testnet.bscscan.com/address/0xD5cC51EEd4bE7DA51d9D11eCE6d007883B3C93EA)
 
-**Contract Address:**
+### Contract Address:
 
 0xCC2a82a7a4cf63cEAC2ca73170f4115196690D83
 
 [View Deployment on opBNB Testnet](https://opbnb-testnet.bscscan.com/address/0xCC2a82a7a4cf63cEAC2ca73170f4115196690D83)
 
-**Greenfield Address:**
+### Greenfield Address:
 
 0x2138ef0b84dc1aa80eaffcfd2cb35e86db857bbf
 
